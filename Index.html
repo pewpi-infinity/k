@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Infinity Music Symbols Library</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        background:#1c1f24;
+        color:#e5e5e5;
+        font-family: Arial, sans-serif;
+        margin:0;
+        padding:0;
+    }
+    header {
+        background:#0f1216;
+        padding:20px;
+        text-align:center;
+        font-size:28px;
+        font-weight:bold;
+        letter-spacing:1px;
+        border-bottom:2px solid #333;
+    }
+    #search {
+        width:90%;
+        margin:20px auto;
+        display:block;
+        padding:12px;
+        border-radius:10px;
+        border:none;
+        font-size:18px;
+    }
+    .section-title {
+        font-size:26px;
+        margin:35px 20px 10px;
+        padding-bottom:5px;
+        border-bottom:1px solid #444;
+    }
+    .symbol {
+        display:grid;
+        grid-template-columns: 120px auto;
+        gap:15px;
+        padding:15px 20px;
+        border-bottom:1px solid #333;
+        align-items:center;
+    }
+    .char {
+        font-size:40px;
+        background:#2b3036;
+        padding:15px;
+        border-radius:12px;
+        text-align:center;
+        cursor:pointer;
+        user-select:all;
+    }
+    .desc {
+        font-size:16px;
+        line-height:1.4;
+        color:#cfcfcf;
+    }
+</style>
+
+<script>
+function filterSymbols() {
+    let q = document.getElementById("search").value.toLowerCase();
+    document.querySelectorAll(".symbol").forEach(item => {
+        let text = item.innerText.toLowerCase();
+        item.style.display = text.includes(q) ? "grid" : "none";
+    });
+}
+</script>
+
+</head>
+
+<body>
+
+<header>Infinity Music Symbols Library</header>
+
+<input id="search" oninput="filterSymbols()" placeholder="Search symbols… (ex: treble, sharp, trill, bass)">
+
+<!-- ============================= -->
+<!--           CLEFS               -->
+<!-- ============================= -->
+<div class="section-title">Clefs</div>
+
+<div class="symbol"><div class="char">𝄞</div><div class="desc">Treble Clef (G-clef) — placed on the G above middle C.</div></div>
+<div class="symbol"><div class="char">𝄢</div><div class="desc">Bass Clef (F-clef) — marks F below middle C.</div></div>
+<div class="symbol"><div class="char">𝄡</div><div class="desc">Alto Clef (C-clef).</div></div>
+<div class="symbol"><div class="char">𝄣</div><div class="desc">Tenor Clef — used for cello, trombone, bassoon.</div></div>
+
+<!-- ============================= -->
+<!--          NOTES                -->
+<!-- ============================= -->
+<div class="section-title">Notes</div>
+
+<div class="symbol"><div class="char">𝅝</div><div class="desc">Whole Note</div></div>
+<div class="symbol"><div class="char">𝅗𝅥</div><div class="desc">Half Note</div></div>
+<div class="symbol"><div class="char">♩</div><div class="desc">Quarter Note</div></div>
+<div class="symbol"><div class="char">♪</div><div class="desc">Eighth Note</div></div>
+<div class="symbol"><div class="char">♫</div><div class="desc">Beamed Notes</div></div>
+<div class="symbol"><div class="char">𝅘𝅥</div><div class="desc">Sixteenth Note</div></div>
+<div class="symbol"><div class="char">𝅘𝅥𝅮</div><div class="desc">Thirty-second Note</div></div>
+
+<!-- ============================= -->
+<!--            RESTS              -->
+<!-- ============================= -->
+<div class="section-title">Rests</div>
+
+<div class="symbol"><div class="char">𝄽</div><div class="desc">Whole Rest</div></div>
+<div class="symbol"><div class="char">𝄾</div><div class="desc">Half Rest</div></div>
+<div class="symbol"><div class="char">𝄿</div><div class="desc">Quarter Rest</div></div>
+<div class="symbol"><div class="char">𝅀</div><div class="desc">Eighth Rest</div></div>
+<div class="symbol"><div class="char">𝅁</div><div class="desc">Sixteenth Rest</div></div>
+<div class="symbol"><div class="char">𝅂</div><div class="desc">Thirty-second Rest</div></div>
+
+<!-- ============================= -->
+<!--        ACCIDENTALS            -->
+<!-- ============================= -->
+<div class="section-title">Accidentals</div>
+
+<div class="symbol"><div class="char">♯</div><div class="desc">Sharp</div></div>
+<div class="symbol"><div class="char">♭</div><div class="desc">Flat</div></div>
+<div class="symbol"><div class="char">♮</div><div class="desc">Natural</div></div>
+<div class="symbol"><div class="char">𝄪</div><div class="desc">Double Sharp</div></div>
+<div class="symbol"><div class="char">𝄫</div><div class="desc">Double Flat</div></div>
+
+<!-- ============================= -->
+<!--           DYNAMICS            -->
+<!-- ============================= -->
+<div class="section-title">Dynamics</div>
+
+<div class="symbol"><div class="char">𝆏</div><div class="desc">Pianississimo — very very soft.</div></div>
+<div class="symbol"><div class="char">𝆐</div><div class="desc">Pianissimo — very soft.</div></div>
+<div class="symbol"><div class="char">𝆑</div><div class="desc">Piano — soft.</div></div>
+<div class="symbol"><div class="char">𝆒</div><div class="desc">Mezzo-piano — medium soft.</div></div>
+<div class="symbol"><div class="char">𝆓</div><div class="desc">Mezzo-forte — medium loud.</div></div>
+<div class="symbol"><div class="char">𝆔</div><div class="desc">Forte — loud.</div></div>
+<div class="symbol"><div class="char">𝆕</div><div class="desc">Fortissimo — very loud.</div></div>
+<div class="symbol"><div class="char">𝆖</div><div class="desc">Fortississimo — extremely loud.</div></div>
+
+<!-- ============================= -->
+<!--           ORNAMENTS           -->
+<!-- ============================= -->
+<div class="section-title">Ornaments</div>
+
+<div class="symbol"><div class="char">𝆗</div><div class="desc">Trill (tr)</div></div>
+<div class="symbol"><div class="char">𝆘</div><div class="desc">Turn</div></div>
+<div class="symbol"><div class="char">𝆙</div><div class="desc">Inverted Turn</div></div>
+<div class="symbol"><div class="char">𝆚</div><div class="desc">Mordent</div></div>
+<div class="symbol"><div class="char">𝆛</div><div class="desc">Inverted Mordent</div></div>
+<div class="symbol"><div class="char">𝆜</div><div class="desc">Arpeggio Mark (vertical squiggle)</div></div>
+
+<!-- ============================= -->
+<!--        ARTICULATIONS          -->
+<!-- ============================= -->
+<div class="section-title">Articulations</div>
+
+<div class="symbol"><div class="char">˙</div><div class="desc">Staccato</div></div>
+<div class="symbol"><div class="char">𝆮</div><div class="desc">Tenuto</div></div>
+<div class="symbol"><div class="char">𝆯</div><div class="desc">Accent</div></div>
+<div class="symbol"><div class="char">𝆰</div><div class="desc">Strong Accent (marcato)</div></div>
+<div class="symbol"><div class="char">𝄐</div><div class="desc">Fermata (hold)</div></div>
+
+<!-- ============================= -->
+<!--         REPEAT SIGNS          -->
+<!-- ============================= -->
+<div class="section-title">Repeat Signs</div>
+
+<div class="symbol"><div class="char">𝄆</div><div class="desc">Start Repeat</div></div>
+<div class="symbol"><div class="char">𝄇</div><div class="desc">End Repeat</div></div>
+<div class="symbol"><div class="char">𝄈</div><div class="desc">Barline with Dots (repeat)</div></div>
+
+<!-- ============================= -->
+<!--        TIME SIGNATURES        -->
+<!-- ============================= -->
+<div class="section-title">Time Signatures</div>
+
+<div class="symbol"><div class="char">𝄴</div><div class="desc">Common Time (4/4)</div></div>
+<div class="symbol"><div class="char">𝄵</div><div class="desc">Cut Time (2/2)</div></div>
+<div class="symbol"><div class="char">4/4</div><div class="desc">Four-Four Time (text version)</div></div>
+<div class="symbol"><div class="char">3/4</div><div class="desc">Three-Four Time</div></div>
+<div class="symbol"><div class="char">6/8</div><div class="desc">Six-Eight Time</div></div>
+
+<!-- ============================= -->
+<!--         KEY SIGNATURES        -->
+<!-- ============================= -->
+<div class="section-title">Key Signatures</div>
+
+<div class="symbol"><div class="char">♯♯♯♯♯♯♯</div><div class="desc">Sharp Key Example (C♯ Major)</div></div>
+<div class="symbol"><div class="char">♭♭♭♭♭♭♭</div><div class="desc">Flat Key Example (C♭ Major)</div></div>
+
+<!-- ============================= -->
+<!--           BARLINES            -->
+<!-- ============================= -->
+<div class="section-title">Barlines</div>
+
+<div class="symbol"><div class="char">|</div><div class="desc">Single Barline</div></div>
+<div class="symbol"><div class="char">||</div><div class="desc">Double Barline</div></div>
+<div class="symbol"><div class="char">‖</div><div class="desc">Thick Double Barline (end)</div></div>
+<div class="symbol"><div class="char">𝄂</div><div class="desc">Final Barline</div></div>
+
+<!-- ============================= -->
+<!--         TEMPO MARKINGS        -->
+<!-- ============================= -->
+<div class="section-title">Tempo Markings</div>
+
+<div class="symbol"><div class="char">♩ = 120</div><div class="desc">Tempo Example (Quarter note = 120 BPM)</div></div>
+<div class="symbol"><div class="char">𝅘𝅥𝅯 = 60</div><div class="desc">Half-note tempo example</div></div>
+
+</body>
+</html>
